@@ -4,10 +4,111 @@
         <meta charset="utf-8" />
         <meta http-equiv="x-ua-compatible" content="ie=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>MP1</title>
+        <title>Best Study Spots on Campus</title>
     </head>
     <body>
-        <h1>Hello World! Welcome to MP1!</h1>
-        <img src="assets/image.jpg">
+        <div id="navbar" class="navbar">
+            <h1>Best Study Spots on Campus</h1>
+            <ul id="nav-links">
+                <li><a href="#north" class="active">North</a></li>
+                <li><a href="#south">South</a></li>
+                <li><a href="#quiet">Quiet</a></li>
+                <li><a href="#busy">Busy</a></li>
+            </ul>
+        </div>
+
+        <div id="north" class="study-area">
+            <h2>North</h2>
+            <div class="columns">
+            <div class="study-spot">
+                <h3>Grainger Library</h3>
+                <p>Great for locking in right before a CBTF test. Enjoy a collaborative space on the first and second floors or move up to a strictly quieter space on the higher floors.</p>
+            </div>
+            <div class="study-spot">
+                <h3>CIF</h3>
+                <p>Ideal for small groups working on an assignment. If you go after 5, it's likely you'll find an empty classroom with large tables and plenty of whiteboards.</p>
+            </div>
+            <div class="study-spot">
+                <h3>Siebel Center for Computer Science</h3>
+                <p>The basement is great for working with 1-2 people with comfy chairs and spacious tables. Plenty of whiteboards. Also enjoy cool study spots outside in the courtyard and on the balconies.</p>
+            </div>
+            </div>
+        </div>
+        <div id="south" class="study-area">
+            <h2>South</h2>
+            <div class="columns">
+            <div class="study-spot">
+                <h3>Funk Library</h3>
+                <p>Enjoy a building with unique architecture and lots of quiet space. Has an older feel compared to some of the northern buildings.</p>
+            </div>
+            <div class="study-spot">
+                <h3>Gies College of Business</h3>
+                <p>Even if you're not a business major, check out this spot for its huge, tall open space with tables overlooking the back lawn and large center area from the second and third floors.</p>
+            </div>
+            <div class="study-spot">
+                <h3>Siebel Center for Design</h3>
+                <p>Great spot if you randomly just want to take a break from studying and see the multitude of things people are doing in the building. Lots of variety of spots (tables, couches, high tables, booths). Great if you enjoy random classical music being played.</p>
+            </div>
+            </div>
+        </div>
+        <div id="quiet" class="study-area">
+            <h2>Quiet</h2>
+            <div id="quiet-carousel">
+            <div class="slide visible">
+                <h3>Main Library</h3>
+                <p>Absolute silence. Find a large wooden table, sit down, turn on the lamp, and get to work.</p>
+            </div>
+            <div class="slide">
+                <h3>Basement of Digital Computer Lab</h3>
+                <p>A little sketchy looking, but it will motivate you to work hard and there are very few distractions that occur.</p>
+            </div>
+            <div class="slide">
+                <h3>Newmark Civil Engineering Lab</h3>
+                <p>Underrated spot with a few "easter egg" study spaces you can find that are very quiet and free of distractions.</p>
+            </div>
+                <button id="previous-slide" class="carousel-arrow" aria-label="Previous study spot">&#10094;</button>
+                <button id="next-slide" class="carousel-arrow" aria-label="Next study spot">&#10095;</button>
+            </div>
+            <p id="slide-number" aria-live="polite">1 / 3</p>
+        </div>
+        <div id="busy" class="study-area">
+            <h2>Busy</h2>
+            <div class="study-spot">
+                <h3>Illini Union</h3>
+                <p>Specifically the area by the Starbucks. There are constantly students coming in and out, having conversations at tables, and random events occurring. If you enjoy spontaneously stopping your work and watching a random dance performance, this is the spot for you.</p>
+                <button id="union-details-button" class="details-button">More about this spot</button>
+            </div>
+            <div class="study-spot">
+                <h3>ARC/CRCE</h3>
+                <p>Both are gyms, what can you expect? They have tables by the entrances where you can people-watch while you study.</p>
+            </div>
+            <div class="study-spot">
+                <h3>Lobbies of Dorms in Six-Pack</h3>
+                <p>If you live here or know someone that does, you should check out the lobbies. There are quite the entertaining sights and activities that can be seen here as you crack down on your math problems.</p>
+            </div>
+            <div class="video-box">
+                <h3>Study spots around campus</h3>
+                <p>These visuals show some of the study spots discussed on this page and more.</p>
+                <video controls width="640">
+                    <source src="assets/study-spots.mp4" type="video/mp4">
+                    Your browser does not support the video element.
+                </video>
+            </div>
+        </div>
+        <div id="union-modal" class="modal">
+            <div class="modal-content">
+                <button id="close-modal" class="close-modal" aria-label="Close details">&times;</button>
+                <h2>Illini Union study tip</h2>
+                <p>The area near Starbucks is a good choice when you want your study session to feel active and social. Bring headphones if you need to focus.</p>
+            </div>
+        </div>
+        <div id="footer">
+            <p>Best Study Spots on Campus</p>
+            <p>Artem Gryniv | CS 409 MP1</p>
+            <div class="social-links">
+                <a class="social-icon instagram-icon" href="https://www.instagram.com/" aria-label="Instagram" title="Instagram"></a>
+                <a class="social-icon youtube-icon" href="https://www.youtube.com/" aria-label="YouTube" title="YouTube"></a>
+            </div>
+        </div>
     </body>
 </html>

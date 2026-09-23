@@ -1,0 +1,270 @@
+body {
+    margin: 0;
+    padding-top: 120px;
+    font-family: Arial, sans-serif;
+    color: #13294b;
+}
+
+/* makes nav stay at the top of the window */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 120px;
+    background-color: #13294b;
+    color: white;
+    text-align: center;
+    z-index: 10;
+    transition: height 0.2s;
+}
+
+.navbar h1 {
+    margin: 0;
+    padding-top: 20px;
+    font-size: 28px;
+    transition: font-size 0.2s;
+}
+
+#nav-links {
+    margin: 15px 0 0;
+    padding: 0;
+}
+
+#nav-links li {
+    display: inline;
+    margin: 0 12px;
+}
+
+#nav-links a {
+    color: white;
+    font-size: 20px;
+    text-decoration: none;
+    transition: font-size 0.2s;
+}
+
+#nav-links a.active, #nav-links a:hover {
+    color: #ffb05c;
+    text-decoration: underline;
+}
+
+/* In JS, add the small class when the page is scrolled */
+.navbar.small {
+    height: 80px;
+}
+
+.navbar.small h1 {
+    padding-top: 10px;
+    font-size: 22px;
+}
+
+.navbar.small #nav-links {
+    margin-top: 8px;
+}
+
+#navbar.small a {
+    font-size: 16px;
+}
+
+
+.study-area {
+    min-height: 400px;
+    padding: 60px 5%;
+    text-align: center;
+}
+
+#south, #busy {
+    background-color: #f0f0f0;
+}
+
+.study-area img {
+    width: 80%;
+    max-width: 550px;
+}
+
+.study-area p {
+    line-height: 1.6;
+}
+
+.details-button {
+    font-size: 14px;
+}
+
+
+.columns {
+    max-width: 1200px;
+    margin: 30px auto;
+    overflow: auto;
+}
+
+.columns .study-spot {
+    float: left;
+    width: 29%;
+    margin: 0 2%;
+}
+
+#quiet-carousel {
+    position: relative;
+    height: 50vh;
+    min-height: 320px;
+    max-width: 900px;
+    margin: 30px auto 0;
+    background-color: #f0f0f0;
+}
+
+.slide {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 15%;
+    width: 70%;
+    transform: translateY(-50%);
+}
+
+.slide.visible {
+    display: block;
+}
+
+.carousel-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    border: none;
+    padding: 14px;
+    background-color: #13294b;
+    color: white;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+.carousel-arrow:hover {
+    background-color: #304c73;
+}
+
+#previous-slide {
+    left: 0;
+}
+
+#next-slide {
+    right: 0;
+}
+
+/* Makes Union image stays fixed */
+#busy {
+    background-image: url('../assets/union.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+#busy h2 {
+    width: 150px;
+    margin: 0 auto 30px;
+    padding: 12px;
+    background-color: white;
+}
+
+#busy .study-spot {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.95);
+}
+
+.video-box {
+    max-width: 760px;
+    margin: 35px auto 0;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.95);
+}
+
+.video-box video {
+    display: block;
+    width: 100%;
+    max-width: 640px;
+    margin: 0 auto;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 20;
+}
+
+.modal.show {
+    display: block;
+}
+
+.modal-content {
+    position: relative;
+    width: 70%;
+    max-width: 500px;
+    margin: 20vh auto;
+    padding: 30px;
+    background-color: white;
+    text-align: center;
+}
+
+.close-modal {
+    position: absolute;
+    top: 8px;
+    right: 12px;
+    border: 0;
+    background: none;
+    color: #13294b;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+.social-links {
+    margin-top: 12px;
+}
+
+.social-icon {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    margin: 0 8px;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: opacity 0.2s;
+}
+
+.social-icon:hover {
+    opacity: 0.7;
+}
+
+.social-icon:focus {
+    outline: 2px solid #ffb05c;
+    outline-offset: 4px;
+}
+
+.instagram-icon {
+    background-image: url('../assets/instagram.svg');
+}
+
+.youtube-icon {
+    background-image: url('../assets/youtube.svg');
+}
+
+#footer {
+    padding: 25px;
+    background-color: #13294b;
+    color: white;
+    text-align: center;
+}
+
+/* Stack the columns on smaller screens */
+@media (max-width: 700px) {
+    .columns .study-spot {
+        float: none;
+        width: auto;
+        margin: 30px 0;
+    }
+}
